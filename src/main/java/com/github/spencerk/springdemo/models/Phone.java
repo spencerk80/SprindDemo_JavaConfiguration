@@ -1,7 +1,12 @@
 package com.github.spencerk.springdemo.models;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
+@Component
+@Scope("prototype")
 public class Phone {
     private String mob;
     private static final Random rand = new Random();

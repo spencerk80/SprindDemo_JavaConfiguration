@@ -1,7 +1,12 @@
 package com.github.spencerk.springdemo.models;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
+@Component
+@Scope("prototype")
 public class Address {
     private static final String[] ZIP_CODES  = {"12345", "23456", "34567", "45678"},
                                   STATES     = {"OR", "CA", "MI", "WI", "VA", "GA", "MO", "NY", "DE"},

@@ -1,8 +1,17 @@
 package com.github.spencerk.springdemo.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+@Component
+@Scope("prototype")
 public class Student {
     private static int nextID;
     private static final String[] F_NAMES = {"Bob", "Tom", "Jerry", "Adam", "Susie", "Mary", "Amilia", "Harper"},
@@ -11,7 +20,9 @@ public class Student {
 
     private int id;
     private String name;
+    @Autowired
     private List<Phone> ph;
+    @Autowired
     private Address add;
 
     public Student() {

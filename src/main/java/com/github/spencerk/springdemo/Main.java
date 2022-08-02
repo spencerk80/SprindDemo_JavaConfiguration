@@ -14,7 +14,7 @@ public class Main {
 
         //Make a list of students. These will automatically include their dependencies thanks to Spring FW
         for(byte i = 0; i < 5; i++)
-            studentList.add((Student) context.getBean("Student"));
+            studentList.add((Student) context.getBean("student"));
 
         //Print out each Student's info
         studentList.forEach(System.out::println);
