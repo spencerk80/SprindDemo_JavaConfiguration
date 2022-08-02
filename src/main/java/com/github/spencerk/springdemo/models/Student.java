@@ -10,8 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Component
-@Scope("prototype")
 public class Student {
     private static int nextID;
     private static final String[] F_NAMES = {"Bob", "Tom", "Jerry", "Adam", "Susie", "Mary", "Amilia", "Harper"},
